@@ -1,0 +1,16 @@
+names(airquality) <- tolower(names(airquality))
+head(airquality)
+aql<-melt(airquality)
+head(aql)
+tail(aql)
+aql <- melt(airquality, id.vars = c("month", "day"))
+head(aql)
+aql <- melt(airquality, id.vars = c("month", "day"),
+            variable.name = "climate_variable", 
+            value.name = "climate_value")
+head(aql)
+aql <- melt(airquality, id.vars = c("month", "day"))
+aqw <- dcast(aql, month + day ~ variable)
+head(aqw)
+head(airquality)
+dcast(aql,month~variable)

@@ -1,0 +1,6 @@
+t = head(letters, 10)
+print(t)
+t = tail(LETTERS, 10)
+print(t)
+e = tail(LETTERS[22:24])
+print(e)
